@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/verifyCode/static/css/main.b5e27925.css",
+    "main.js": "/verifyCode/static/js/main.307614b3.js",
+    "index.html": "/verifyCode/index.html",
+    "main.b5e27925.css.map": "/verifyCode/static/css/main.b5e27925.css.map",
+    "main.307614b3.js.map": "/verifyCode/static/js/main.307614b3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b5e27925.css",
+    "static/js/main.307614b3.js"
+  ]
+}
