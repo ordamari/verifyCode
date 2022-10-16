@@ -1,23 +1,38 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import VerifyCode from './components/VerifyCode';
 
 function App() {
+
+  const [verifyCode, setVerifyCode] = useState('');
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  const logIn = () => {
+    if (verifyCode.length < 4) return;
+    else setIsLoggedIn(true);
+  }
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {
+        isLoggedIn ? (
+          <div>
+            <h1>You logged in</h1>
+          </div>
+        ) : (
+          <div className='login-container' >
+            <h1>Enter verify code</h1>
+
+            <VerifyCode
+              length={4}
+              enterCallBack={logIn}
+              setVerifyCode={setVerifyCode}
+            />
+            <button onClick={logIn} >Log in</button>
+          </div>
+        )
+      }
     </div>
   );
 }
