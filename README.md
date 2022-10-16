@@ -1,4 +1,4 @@
-## contextMenu
+## verifyCode
 
 Demo of using verifyCode component [DEMO](https://ordamari.github.io/verifyCode/)
 
